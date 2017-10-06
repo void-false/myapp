@@ -1,2 +1,9 @@
 storage1:
+  name: public
   type: nfs
+
+web1:
+  network_dirs:
+    storage1:
+      - public/uploads
+      - public/tmp
