@@ -1,0 +1,42 @@
+body {
+    background-color: #E7D7A4;
+    color: #1B171B;
+    margin: 0;
+    padding: 0;
+}
+
+#login {
+    width: 180px;
+    margin: 0 auto;
+    
+}
+
+#container {
+    margin: 10px;
+}
+
+#addItemForm {
+    margin-bottom: 10px;
+}
+a {
+    color: red;
+    text-decoration:none;
+}
+
+table {
+    width: 100%;
+}
+
+table, tr, th, td {
+    border-bottom: 1px solid #847474;
+}
+
+#activeTab {
+    font-weight: bold;
+    color: black;
+    text-decoration: underline;
+}
+/*input {
+    background-color: black;
+    color: yellow;
+}*/
