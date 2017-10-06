@@ -1,0 +1,22 @@
+body {
+    color: rgb(183, 183, 183);
+    background-color: #171414;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+#container {
+    height: 680px;
+    width: 840px;
+    border: solid 1px;
+}
+
+#box {
+    visibility: hidden;
+    position: relative;
+    top: 480px;
+    left: 640px;
+    height: 200px;
+    width: 200px;
+    border-radius: 0;
+    background-color: #b21d1d;
+}
