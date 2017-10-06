@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <style>
+        * {
+            font-family: "Arial Regular","Arial";
+            font-size: 16px;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: linear-gradient(#e5f9af, #edfa9a);
+        }
+        #main {
+            width: 164px;
+            margin: 3px auto;
+        }
+        label {
+            margin: 1px;
+            float: left;
+            display: block;
+            box-sizing: border-box;
+            padding: 11px 0px 0px 4px;
+            border-radius: 6px;
+            background-color: #6C63FD;
+            color: #D7D7D7;
+            width: 60px;
+            height: 40px;
+        }
+        input {
+            margin: 1px;
+            float: left;
+            display: block;
+            text-align: center;
+            background-color: #D7D7D7;
+            border: none;
+            box-sizing: border-box;
+            height: 40px;
+            width: 100px;
+            border-radius: 6px;
+        }
+        button {
+            border: 0;
+            color: #5E5E5E;
+            background: linear-gradient(#F8AC34, #EA7800);
+            width: 165px;
+            height: 40px;
+            border-radius: 6px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        #output {
+            margin-top: 8px;
+            width: 165px;
+            font-size: 32px;
+            color: #5E5E5E;
+            text-align: center;
+        }
+    </style>
+    </head>
+<body>
+    <div id="container">
+        <div id="main">
+            <button id="morning" onclick="calculate(this)">Fri Morning <span id="morning_count"></span></button>    
+            <button id="evening" onclick="calculate(this)">Fri Evening <span id="evening_count"></span></button>    
+            <button id="clear" onclick="clear_screen()">Clear</button>    
+            <p id="output">0</p>
+        </div>
+    </div>
+    
+    <script>
+        function clear_screen() {
+            document.getElementById("output").innerHTML = 0;
+            document.getElementById("morning").innerHTML = "Fri Morning <span id=\"morning_count\"></span>";
+            document.getElementById("evening").innerHTML = "Fri Evening <span id=\"evening_count\"></span>";
+        }
+        function calculate(element) {
+            var i = parseInt(document.getElementById("morning_count").innerHTML) || 0;
+            var j = parseInt(document.getElementById("evening_count").innerHTML) || 0;
+            var base = 350;
+            var id = element.id;
+            var result = parseFloat(document.getElementById("output").innerHTML);
+            
+            if(id == "morning") {
+               result += base * 1.25;
+               document.getElementById("morning_count").innerHTML = ++i;
+            }
+            else {
+                result += base * 1.5;
+                document.getElementById("evening_count").innerHTML = ++j;
+            }
+            
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+
+</body>
+</html>
