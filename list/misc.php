@@ -30,7 +30,7 @@
     <?php
         if(isset($_SESSION['id'])) {
             
-            $db = new PDO("sqlite:../../data/bookapplite.sqlite");
+            $db = new PDO("sqlite:../dbplace/bookapplite.sqlite");
 
             $db->exec("CREATE TABLE IF NOT EXISTS misc(id INTEGER PRIMARY KEY, name TEXT)");
 
