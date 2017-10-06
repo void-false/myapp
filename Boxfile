@@ -2,6 +2,8 @@ storage1:
   type: nfs
 
 web1:
+  php_extensions:
+  - pdo_sqlite
   network_dirs:
     storage1:
       - dbplace
