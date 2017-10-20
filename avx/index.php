@@ -55,7 +55,7 @@ for($i = 1; $i <= 69; $i++) {
         echo $element;
     }
     //for($k = 0; $k < 40000; $k++) { echo ' '; }
-    sleep(2);
+    sleep(5);
 }
 
 
