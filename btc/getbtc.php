@@ -32,6 +32,7 @@
 		];
 		
 		$output_json = json_encode($output);
+		header('Content-Type: application/json');
 		echo $output_json;
 
 ?>
