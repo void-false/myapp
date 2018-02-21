@@ -19,7 +19,7 @@
 	<div>Last Updated: <span class="now">00:00:00<span></span></div>
 	<div class="result"><p>Loading data...</p></div>
 	
-	<div class="sc">
+	<div class="ethltc">
 		<p></p>
 	</div>
 	
@@ -59,13 +59,13 @@
 										   + "Low: " + data.ltcbtc_low + "<br>"
 										   + "<strong>Last: " + data.ltcbtc_last + "</p>");
 										   
-				$(".sc").html("<p>High: " + data.sc_high + "<br>" 
-										   + "Low: " + data.sc_low + "<br>"
-										   + "<strong>Last: " + data.sc_last + "</strong></p>");
+				$(".ethltc").html("<p>High: " + data.ethltc_high + "<br>" 
+										   + "Low: " + data.ethltc_low + "<br>"
+										   + "<strong>Last: " + data.ethltc_last + "</strong></p>");
 			
 				$(".now").html(data.time_now);
 				
-				document.title = Math.trunc(data.btc_last) + "/" + Math.trunc(data.ltc_last) + "/" + data.ltcbtc_last.slice(0,7) + "/" + data.sc_last.slice(-4);
+				document.title = Math.trunc(data.btc_last) + "/" + Math.trunc(data.ltc_last) + "/" + data.ltcbtc_last.slice(0,7) + "/" + data.ethltc_last.slice(0, 4);
 			}
 		});
 	};
