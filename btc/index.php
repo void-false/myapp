@@ -65,7 +65,8 @@
 			
 				$(".now").html(data.time_now);
 				
-				document.title = Math.trunc(data.btc_last) + "/" + Math.trunc(data.ltc_last) + "/" + data.ltcbtc_last.slice(0,7) + "/" + data.ethltc_last.slice(0, 4);
+				// document.title = Math.trunc(data.btc_last) + "/" + Math.trunc(data.ltc_last) + "/" + data.ltcbtc_last.slice(0,7) + "/"
+				document.title = Math.trunc(data.btc_last) + "/" + Math.trunc(data.ltc_last) + "/" + data.ltcbtc_last.slice(0,7) + "/" + data.ethltc_last.toString().slice(0,4);
 			}
 		});
 	};
