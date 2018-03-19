@@ -59,13 +59,16 @@
 										   + "Low: " + data.ltcbtc_low + "<br>"
 										   + "<strong>Last: " + data.ltcbtc_last + "</p>");
 										   
-				$(".ethltc").html("<p>High: " + data.ethltc_high + "<br>" 
+				$(".ethltc").html("<p>High: " + data.eth_high + "<br>" 
+										   + "Low: " + data.eth_low + "<br>"
+										   + "<strong>Last: " + data.eth_last + "</strong></p>"
+										   + "<p>High: " + data.ethltc_high + "<br>" 
 										   + "Low: " + data.ethltc_low + "<br>"
 										   + "<strong>Last: " + data.ethltc_last + "</strong></p>");
 			
 				$(".now").html(data.time_now);
 				
-				document.title = Math.trunc(data.btc_last) + "/" + Math.trunc(data.ltc_last) + "/" + data.ltcbtc_last.slice(0,7) + "/" + data.ethltc_last.toString().slice(0,4);
+				document.title = Math.trunc(data.btc_last) + "/" + Math.trunc(data.ltc_last) + "/" + Math.trunc(data.eth_last);
 			}
 		});
 	};
